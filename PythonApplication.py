@@ -2,6 +2,13 @@ from random import *
 from module1 import*
 s=[]
 def arvud_loendis():
+    """
+    :param arv n:int
+    :param arv mini:int
+    :param arv maxi:int
+    :rtype int
+    """
+    
     print("Данные:")
     n=abs(int(input("Сколько целых чисел генерируем в список? => ")))
     mini=int(input("Введите минимальное число диапазона => "))
@@ -41,6 +48,7 @@ def vahetus(a:int,b:int):
 
 def generator(n:int,loend:list,a:int,b:int):
     """
+    Genereerib juhusliku arvu vahemikus a ja b ning lisab ta/need loendisse
     """
     for i in range (n):
         loend.append(randint(a,b))
@@ -56,6 +64,9 @@ def jagamine(loend:list,p:list,n:list,nol:list):
             nol(append(el))
 
 def keskmine(loend,n):
+    """
+    Näitab keskmisi positiivseid ja keskmisi negatiivseid numbreid
+    """
     n=len(loend)
     if n==0:
         kesk=0
@@ -67,6 +78,11 @@ def keskmine(loend,n):
     return kesk
 
 def lisamine(loend,el):
+    """
+    :param arv el: int and float
+    Programm lisab algsele massiivile negatiivse keskmise või positiivse keskmise
+    """
+
     loend(append(el))
     loend(sort())
 
